@@ -1,24 +1,22 @@
 import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
-import Register from "./pages/Register";
-import Fetch from "./pages/Fetch";
-import Vote from "./pages/Vote";
 import Navbar from "./components/Navbar";
+import Vote from "./pages/Vote";
+import Register from "./pages/Register";
+import Manage from "./pages/Manage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Fetch />,
-    errorElement: <Navbar />,
-  },
-  {
-    path: "/register",
-    element: <Register />,
-    errorElement: <Navbar />,
-  },
-  {
-    path: "/vote",
     element: <Vote />,
-    errorElement: <Navbar />,
   },
+  {
+    path: "/admin",
+    element: <Register />,
+  },
+  {
+    path: "/manage",
+    element: <Manage />,
+  },
+
 ]);
 
 function App() {
