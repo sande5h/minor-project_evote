@@ -14,7 +14,6 @@
 .container-voter {
     display: flex;
     justify-content: space-around;
-    /* border: 2px red solid; */
     min-width: 100%;
 }
 
@@ -27,8 +26,8 @@
     border: var(--color5) 5px solid;
     border-radius: 10px;
     box-sizing: border-box;
-    max-height: 400px;
-    min-width: 35%;
+    /* max-height: 400px; */
+    min-width: 40%;
     margin: 5px;
     padding: 10px;
 }
@@ -48,6 +47,7 @@
     margin: 20px;
     background-color: var(--color1);
     border-radius: 10px;
+    min-width: 80%;
 }
 
 .container-voter .vote .form-item {

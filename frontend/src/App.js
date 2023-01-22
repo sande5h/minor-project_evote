@@ -1,8 +1,7 @@
 import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Vote from "./pages/Vote";
-import Register from "./pages/Register";
-import Manage from "./pages/Manage";
+import Vote from "./pages/vote/Vote";
+import Register from "./pages/register/Register";
+import Manage from "./pages/manage/Manage";
 const router = createBrowserRouter([
   {
     path: "/",
