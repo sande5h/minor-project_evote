@@ -16,7 +16,6 @@ const ManageVoter = () => {
 
   return voterData.map((item) => (
     <Voter
-
       id={item.id}
       name={item.name}
       address={item.address}

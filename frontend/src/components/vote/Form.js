@@ -34,7 +34,7 @@ const Form = (props) => {
 
   return (
     <div className="form-item">
-      <label for="president">{props.category}</label>
+      <label for="">{props.category}</label>
       <select onChange={categoryHandler} name="" id="">
         <option value="none" selected disabled hidden>
           Select Candidates

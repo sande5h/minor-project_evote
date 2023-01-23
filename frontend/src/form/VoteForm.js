@@ -31,13 +31,32 @@ const VoteForm = () => {
     // console.log(event.target.value);
     setSocailNumber(event.target.value);
   };
+  // const [newVoteData, setNewVoteData] = useState([])
+  const newVoteData=[];
   const submitHandler = (event) => {
     event.preventDefault();
-    const voteData = {
-      ...receivedVoteData,
-      social_number: socailNumber,
-    };
-    console.log(voteData);
+    
+    receivedVoteData.map((item)=>{
+      // console.log(item)
+      const newData = {
+        ...item,
+        socailNumber : socailNumber
+      }
+      console.log(newData);
+      // setNewVoteData([...newVoteData, newData])
+      // console.log(newVoteData);
+      newVoteData.push(newData)
+
+    })
+    
+    axios({
+      method: "post",
+      url: "http://localhost:3001/transaction-broadcast",
+      data: {
+        transaction: newVoteData,
+      },
+    });
+
   };
 
   return (

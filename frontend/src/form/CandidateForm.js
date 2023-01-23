@@ -86,11 +86,12 @@ const CandidateForm = () => {
           id="category"
           name="category"
           required
-        >{
-          categoryData.map((item)=>(
-            <option value={item.category_item}>{item.category_item}</option>
-          ))
-        }
+        >
+          <option value="" selected disabled hidden >Select Category</option>{
+            categoryData.map((item) => (
+              <option value={item.category_item}>{item.category_item}</option>
+            ))
+          }
         </select>
       </div>
       <div className="form-item">
